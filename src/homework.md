@@ -22,8 +22,10 @@ Stwórz interfejs(y), który będzie zawierał:
 
 Stwórz implementację podanego API. 
 
+Zadanie proszę wrzucić jako swój projekt na github i zaprosić mnie do niego abym mógł go przejrzeć. Mój github: kchudy-krx
 **Dodatkowo na szóstkę - kobieta i mężczyzna mogą mieć dzieci. Dzieci mogą mieć mieć tylko jedną matkę i jednego ojca.**
 
 **Deadline - 2020-04-27 22:00**
 
 **W razie pytań, slack lub k.chudy@krx.com.pl**
+
