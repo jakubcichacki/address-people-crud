@@ -10,11 +10,11 @@ Połącz osoby i adresy, zakładając, że pod jednym adresem może mieszkać wi
 
 Stwórz interfejs(y), który będzie zawierał:
 * CRUD osób i adresów. 
-* wyszukanie osoby po id osoby
-* wyszukanie kobiet
-* wyszukanie mężczyzn
-* wyszukanie po imieniu
-* wyszukanie po nazwisku
+* wyszukanie osoby po id osoby **OK**
+* wyszukanie kobiet **OK**
+* wyszukanie mężczyzn **OK**
+* wyszukanie po imieniu **OK**
+* wyszukanie po nazwisku **OK**
 * wyszukanie po id adresu
 * wyszukanie po mieście
 * wyszukanie po kodzie pocztowym

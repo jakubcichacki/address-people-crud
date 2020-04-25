@@ -31,31 +31,66 @@ public class PersonRepository implements PersonRepositoryInterface {
 
     @Override
     public boolean update(Person person) {
+        Person personToUpdate = findById(person.getId());
+        if (personToUpdate != null) {
+            personToUpdate = person;
+            return true;
+        }
         return false;
+
     }
 
     @Override
     public Person findById(Id id) {
+        for (Person person : people) {
+            if (person.getId().equals(id)) {
+                return person;
+            }
+        }
         return null;
     }
 
     @Override
     public List<Person> findWomen() {
-        return null;
+        List<Person> allWomen = null;
+        for (Person el : people) {
+            if (el.getSex().equals("woman")) {
+                allWomen.add(el);
+            }
+        }
+        return allWomen;
     }
 
     @Override
     public List<Person> findMen() {
-        return null;
+        List<Person> allMen = null;
+        for (Person el : people) {
+            if (el.getSex().equals("man")) {
+                allMen.add(el);
+            }
+        }
+        return allMen;
     }
 
     @Override
     public List<Person> findByName(String name) {
-        return null;
+        List<Person> allWithName = null;
+        for (Person el : people) {
+            if (el.getName().equals(name)) {
+                allWithName.add(el);
+            }
+        }
+        return allWithName;
     }
 
     @Override
     public List<Person> findByLastName(String lastName) {
-        return null;
+        List<Person> allWithLastName = null;
+        for (Person el : people) {
+            if (el.getName().equals(lastName)) {
+                allWithLastName.add(el);
+            }
+        }
+        return allWithLastName;
     }
 }

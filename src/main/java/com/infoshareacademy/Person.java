@@ -46,4 +46,12 @@ public abstract class Person {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 }
