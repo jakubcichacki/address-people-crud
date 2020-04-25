@@ -1,5 +1,7 @@
 package com.infoshareacademy;
 
+import java.util.Objects;
+
 public abstract class Person {
     private Id <Integer> id;
     private String name;
@@ -53,5 +55,33 @@ public abstract class Person {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id.equals(person.id) &&
+                name.equals(person.name) &&
+                lastName.equals(person.lastName) &&
+                sex.equals(person.sex) &&
+                address.equals(person.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, lastName, sex, address);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", sex='" + sex + '\'' +
+                ", address=" + address +
+                '}';
     }
 }
