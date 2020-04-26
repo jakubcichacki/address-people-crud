@@ -2,8 +2,7 @@ package com.infoshareacademy;
 
 public class City extends Address {
 
-    @Override
-    public String getCityType() {
-        return "city";
+    public City(Id<Integer> id, String city, String street, String zipCode) {
+        super(id, city, "city", street, zipCode);
     }
 }

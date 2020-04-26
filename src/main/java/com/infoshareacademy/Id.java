@@ -10,4 +10,9 @@ public class Id<T> {
     public T getId() {
         return t;
     }
+
+    @Override
+    public String toString() {
+        return t.toString();
+    }
 }

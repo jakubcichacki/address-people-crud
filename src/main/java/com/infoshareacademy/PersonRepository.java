@@ -1,5 +1,6 @@
 package com.infoshareacademy;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -30,10 +31,20 @@ public class PersonRepository implements PersonRepositoryInterface {
     }
 
     @Override
+    public String toString() {
+        return "PersonRepository{" +
+                "people=" + people +
+                '}';
+    }
+
+    @Override
     public boolean update(Person person) {
         Person personToUpdate = findById(person.getId());
         if (personToUpdate != null) {
-            personToUpdate = person;
+            personToUpdate.setName(person.getName());
+            personToUpdate.setLastName(person.getLastName());
+            personToUpdate.setAddress(person.getAddress());
+            personToUpdate.setSex(person.getSex());
             return true;
         }
         return false;
@@ -52,18 +63,19 @@ public class PersonRepository implements PersonRepositoryInterface {
 
     @Override
     public List<Person> findWomen() {
-        List<Person> allWomen = null;
+        List<Person> allWomen = new ArrayList<>();
         for (Person el : people) {
             if (el.getSex().equals("woman")) {
                 allWomen.add(el);
             }
+            el.toString();
         }
         return allWomen;
     }
 
     @Override
     public List<Person> findMen() {
-        List<Person> allMen = null;
+        List<Person> allMen = new ArrayList<>();
         for (Person el : people) {
             if (el.getSex().equals("man")) {
                 allMen.add(el);
@@ -74,7 +86,7 @@ public class PersonRepository implements PersonRepositoryInterface {
 
     @Override
     public List<Person> findByName(String name) {
-        List<Person> allWithName = null;
+        List<Person> allWithName = new ArrayList<>();
         for (Person el : people) {
             if (el.getName().equals(name)) {
                 allWithName.add(el);
@@ -85,9 +97,9 @@ public class PersonRepository implements PersonRepositoryInterface {
 
     @Override
     public List<Person> findByLastName(String lastName) {
-        List<Person> allWithLastName = null;
+        List<Person> allWithLastName = new ArrayList<>();
         for (Person el : people) {
-            if (el.getName().equals(lastName)) {
+            if (el.getLastName().equals(lastName)) {
                 allWithLastName.add(el);
             }
         }

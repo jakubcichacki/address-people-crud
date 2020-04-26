@@ -1,8 +1,8 @@
 package com.infoshareacademy;
 
 public class Village extends Address{
-    @Override
-    public String getCityType() {
-        return "village";
+
+    public Village(Id<Integer> id, String city, String street, String zipCode) {
+        super(id, city, "village", street, zipCode);
     }
 }

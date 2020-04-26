@@ -1,5 +1,6 @@
 package com.infoshareacademy;
 
+import java.util.List;
 import java.util.Objects;
 
 public abstract class Person {
@@ -8,6 +9,9 @@ public abstract class Person {
     private String lastName;
     private String sex;
     private Address address;
+    private Man father;
+    private Woman mother;
+    private List<Person> children;
 
     public Person(Id<Integer> id, String name, String lastName, String sex, Address address) {
         this.id = id;
@@ -76,12 +80,11 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", sex='" + sex + '\'' +
-                ", address=" + address +
-                '}';
+        return "PERSON - " +
+                "id: " + "'" + getId().toString() + "'" +
+                ", name: '" + name + '\'' +
+                ", lastName: '" + lastName + '\'' +
+                ", sex: '" + sex + '\'' +
+                ", " + getAddress().toString();
     }
 }

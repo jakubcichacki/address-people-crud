@@ -9,16 +9,16 @@ Adres powinien być klasą abstrakcyjną, a klasami zwykłymi powinny być wsie 
 Połącz osoby i adresy, zakładając, że pod jednym adresem może mieszkać więcej niż jedna osoba.
 
 Stwórz interfejs(y), który będzie zawierał:
-* CRUD osób i adresów. 
+* CRUD osób i adresów. **OK**
 * wyszukanie osoby po id osoby **OK**
 * wyszukanie kobiet **OK**
 * wyszukanie mężczyzn **OK**
 * wyszukanie po imieniu **OK**
 * wyszukanie po nazwisku **OK**
-* wyszukanie po id adresu
-* wyszukanie po mieście
-* wyszukanie po kodzie pocztowym
-* wyszukanie po cząstce adresu (np - Gdynia, ul. świętojańska)
+* wyszukanie po id adresu **OK**
+* wyszukanie po mieście **OK**
+* wyszukanie po kodzie pocztowym **OK**
+* wyszukanie po cząstce adresu (np - Gdynia, ul. świętojańska) **OK**
 
 Stwórz implementację podanego API. 
 

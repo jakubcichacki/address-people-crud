@@ -1,5 +1,6 @@
 package com.infoshareacademy;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -51,16 +52,34 @@ public class AddressRepository implements AddressRepositoryInterface {
 
     @Override
     public List<Address> findByCity(String city) {
-        return null;
+        List<Address> addressesInCity = new ArrayList<>();
+        for(Address address : addresses) {
+            if(address.getCity().equals(city)) {
+                addressesInCity.add(address);
+            }
+        }
+        return addressesInCity;
     }
 
     @Override
     public List<Address> findByZIPCode(String zipCode) {
-        return null;
+        List<Address> addressesWithZIPCode = new ArrayList<>();
+        for(Address address : addresses) {
+            if(address.getZipCode().equals(zipCode)) {
+                addressesWithZIPCode.add(address);
+            }
+        }
+        return addressesWithZIPCode;
     }
 
     @Override
     public List<Address> findByPartOfAddress(String partOfAddress) {
-        return null;
+        List<Address> addressesWithThePart = new ArrayList<>();
+        for (Address address : addresses) {
+            if(address.toString().contains(partOfAddress)) {
+                addressesWithThePart.add(address);
+            }
+        }
+        return addressesWithThePart;
     }
 }
